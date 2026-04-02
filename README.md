@@ -1,4 +1,4 @@
-# Grok scraper
+# Grok Scraper
 
 [![Grok scraper by cloro](https://github.com/cloro-dev/grok-scraper/blob/main/grok-scraper-hero-image.png)](https://cloro.dev/grok/?utm_source=github)
 
@@ -87,12 +87,13 @@ axios
 
 ### Request parameters
 
-| Parameter          | Description                                                                 | Default value |
-| ------------------ | --------------------------------------------------------------------------- | ------------- |
-| `prompt`\*         | The search query or question to ask Grok (1-10,000 characters)              | –             |
-| `country`          | Optional country/region code for localized results (e.g., `US`, `GB`, `DE`) | `US`          |
-| `include.markdown` | Include response in Markdown format when set to true                        | `false`       |
-| `include.html`     | Include URL to full HTML response when set to true (URL expires after 24h)  | `false`       |
+| Parameter             | Description                                                                 | Default value |
+| --------------------- | --------------------------------------------------------------------------- | ------------- |
+| `prompt`\*            | The search query or question to ask Grok (1-10,000 characters)              | –             |
+| `country`             | Optional country/region code for localized results (e.g., `US`, `GB`, `DE`) | `US`          |
+| `include.markdown`    | Include response in Markdown format when set to true                        | `false`       |
+| `include.html`        | Include URL to full HTML response when set to true (URL expires after 24h)  | `false`       |
+| `include.rawResponse` | Include raw streaming response events for debugging                         | `false`       |
 
 \* Mandatory parameters
 
@@ -210,7 +211,7 @@ Grok provides enhanced source metadata that goes beyond basic link information. 
 
 For detailed documentation, advanced features, and integration guides, visit:
 
-- **API documentation:** [docs.cloro.dev](https://docs.cloro.dev)
+- **API documentation:** [docs.cloro.dev](https://docs.cloro.dev/)
 - **Grok scraper page:** [cloro.dev/grok](https://cloro.dev/grok/)
 
 ## Other available scrapers
@@ -220,13 +221,14 @@ For detailed documentation, advanced features, and integration guides, visit:
 - **[ChatGPT](https://cloro.dev/chatgpt/)** - Extracts structured data from ChatGPT with advanced features including shopping cards, raw response data, and query fan-out.
 - **[Copilot](https://cloro.dev/copilot/)** - Extracts structured data from Microsoft Copilot for development tools, Microsoft ecosystem research, and enterprise-focused queries.
 - **[Gemini](https://cloro.dev/gemini/)** - Extracts structured data from Google Gemini for complex reasoning, content generation, and source confidence scoring.
-- **[Google](https://cloro.dev/google-search/)** - Extracts structured data from Google Search results, including organic results, People Also Ask questions, related searches, and optional AI Overview data.
+- **[Google Search](https://cloro.dev/google-search/)** - Extracts structured data from Google Search results, including organic results, People Also Ask questions, related searches, and optional AI Overview data.
+- **[Google News](https://cloro.dev/google-news/)** - Extracts structured news articles from Google News with titles, snippets, sources, dates, and thumbnail images for news monitoring and media tracking.
 - **[Grok](https://cloro.dev/grok/)** - Extracts comprehensive structured data from Grok with real-time web sources and enhanced source metadata for deeper analysis.
 - **[Perplexity](https://cloro.dev/perplexity/)** - Extracts comprehensive structured data from Perplexity AI with real-time web sources, automatically detecting and extracting rich data objects.
 
 ## Contact us
 
-If you have questions or need support, reach out to us on [our contact page](https://cloro.dev/contact).
+If you have questions or need support, reach out to us at [support@cloro.dev](mailto:support@cloro.dev).
 
 ---
 
