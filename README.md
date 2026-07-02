@@ -4,9 +4,9 @@
 
 [![cloro](https://img.shields.io/badge/Powered%20by-cloro-blue?style=for-the-badge)](https://cloro.dev/)
 
-The [Grok Scraper](https://cloro.dev/grok/) by cloro enables developers to programmatically interact with Grok and automatically collect AI-powered search responses along with structured metadata. Instead of manual data collection, you can retrieve results as parsed JSON, raw HTML, or other formats for seamless integration into your workflows.
+The [Grok Scraper](https://cloro.dev/grok/) by cloro lets developers programmatically interact with Grok and collect AI search responses with structured metadata. You can retrieve results as parsed JSON, raw HTML, or other formats for integration into your workflows.
 
-You can use cloro's Grok Scraper for current events monitoring, news tracking, research automation, and competitive analysis. It handles dynamic AI-generated content, supports real-time extraction, and eliminates the need to manage authentication, sessions, or anti-bot systems.
+You can use cloro's Grok Scraper for current events monitoring, news tracking, research automation, and competitive analysis. It handles dynamic AI-generated content, supports real-time extraction, and removes the need to manage authentication, sessions, or anti-bot systems.
 
 ## How it works
 
@@ -91,6 +91,7 @@ axios
 | --------------------- | --------------------------------------------------------------------------- | ------------- |
 | `prompt`\*            | The search query or question to ask Grok (1-10,000 characters)              | –             |
 | `country`             | Optional country/region code for localized results (e.g., `US`, `GB`, `DE`) | `US`          |
+| `state`               | Optional US state code for state-level geo-targeting (e.g., `CA`, `TX`, `NY`). Only valid when `country` is `US`. See [supported codes](https://api.cloro.dev/v1/states?country=US). | –             |
 | `include.markdown`    | Include response in Markdown format when set to true                        | `false`       |
 | `include.html`        | Include URL to full HTML response when set to true (URL expires after 24h)  | `false`       |
 | `include.rawResponse` | Include raw streaming response events for debugging                         | `false`       |
@@ -133,7 +134,7 @@ The Grok Scraper API returns a structured JSON object containing Grok's AI-gener
 
 ## Enhanced source metadata
 
-Grok provides comprehensive metadata for each source, going beyond basic link information to include rich contextual data:
+Grok provides additional metadata for each source beyond basic link information:
 
 | Field              | Type    | Description                                   |
 | ------------------ | ------- | --------------------------------------------- |
@@ -149,31 +150,31 @@ Grok provides comprehensive metadata for each source, going beyond basic link in
 | `image`            | string  | URL to preview image from the source          |
 | `favicon`          | string  | URL to website favicon                        |
 
-This enhanced metadata enables deeper analysis and better understanding of source context, attribution, and credibility.
+This metadata supports analysis of source context, attribution, and credibility.
 
 ### Real-time web sources
 
-Grok integrates with real-time web sources, providing current and up-to-date information with detailed metadata for each source. The enhanced source structure includes preview text, search engine display text, site information, creator details, and image URLs for comprehensive context.
+Grok integrates with real-time web sources, providing current information with detailed metadata for each source. The source structure includes preview text, search engine display text, site information, creator details, and image URLs.
 
 ## Practical Grok scraper use cases
 
-1. **Real-time news monitoring:** Track breaking news and current events with enhanced source attribution and preview capabilities.
-2. **Research automation:** Gather comprehensive information with detailed source metadata including creator information and site context.
-3. **Content verification:** Fact-check information using Grok's enhanced source attribution with preview text and metadata.
-4. **Market intelligence:** Monitor industry trends and competitive landscape with rich source metadata for deeper analysis.
-5. **Social media analysis:** Track trending topics and viral content with detailed source information including creator and site details.
-6. **Brand monitoring:** Monitor brand mentions and sentiment across real-time web sources with enhanced attribution.
-7. **Academic research:** Collect comprehensive data with detailed source citations including author information and metadata.
-8. **SEO analysis:** Analyze search result patterns and source attribution with enhanced metadata for search engine optimization insights.
+1. **Real-time news monitoring:** Track breaking news and current events with source attribution and preview text.
+2. **Research automation:** Gather information with source metadata including creator information and site context.
+3. **Content verification:** Fact-check information using Grok's source attribution with preview text and metadata.
+4. **Market intelligence:** Monitor industry trends and competitive landscape with source metadata.
+5. **Social media analysis:** Track trending topics and viral content with source information including creator and site details.
+6. **Brand monitoring:** Monitor brand mentions and sentiment across real-time web sources.
+7. **Academic research:** Collect data with source citations including author information and metadata.
+8. **SEO analysis:** Analyze search result patterns and source attribution.
 
 ## Why choose cloro?
 
-- **Simple integration:** Clean API design with comprehensive documentation and examples.
+- **Simple integration:** Clean API design with documentation and examples.
 - **Reliable performance:** >99% uptime and low latencies (P50 < 30s, P90 < 60s)
 - **No infrastructure hassle:** We handle rate limiting and browser management.
-- **Real-time data:** Access to current information with enhanced source attribution.
+- **Real-time data:** Access to current information with source attribution.
 - **Developer support:** Responsive support team to help with integration and troubleshooting.
-- **Enhanced metadata:** Rich source information including preview text, creator details, and site context.
+- **Source metadata:** Source information including preview text, creator details, and site context.
 
 ## FAQ
 
@@ -183,13 +184,13 @@ Any website is legal to be scraped as long as the information is publicly access
 
 ### What makes cloro's Grok scraper unique?
 
-cloro's Grok endpoint provides reliable access to Grok's AI-powered search with:
+cloro's Grok endpoint provides access to Grok's AI search with:
 
-- **Enhanced source metadata** including preview text, search engine display text, site information, creator details, and image URLs
+- **Source metadata** including preview text, search engine display text, site information, creator details, and image URLs
 - **Real-time web source integration** for current information and breaking news
-- **Comprehensive structured data extraction** for seamless integration into your workflows
-- **Multi-format responses** including text, HTML, markdown, and rich structured objects
-- **Detailed attribution** with creator information and site context for better source verification
+- **Structured data extraction** for direct integration into your workflows
+- **Multi-format responses** including text, HTML, markdown, and structured objects
+- **Attribution data** with creator information and site context
 
 ### What's the recommended timeout for requests?
 
@@ -197,7 +198,7 @@ We don't recommend putting any timeout, given that our system retries automatica
 
 ### How current is the information from Grok?
 
-Grok provides real-time access to current information and breaking news through its web integration, making it ideal for monitoring current events and recent developments in any field.
+Grok provides real-time access to current information and breaking news through its web integration. Use it for monitoring current events and recent developments.
 
 ### Does the API support different countries?
 
@@ -205,13 +206,13 @@ Yes, you can specify country codes like `US`, `GB`, `DE`, `JP`, `IN`, `BR` and m
 
 ### What's the difference between Grok and other AI search scrapers?
 
-Grok provides enhanced source metadata that goes beyond basic link information. Each source includes preview text, search engine display text, site name, metadata title, creator information, and image URLs. This richer context enables deeper analysis and better understanding of source credibility and attribution.
+Grok provides additional source metadata beyond basic link information. Each source includes preview text, search engine display text, site name, metadata title, creator information, and image URLs.
 
 ## Learn more
 
 For detailed documentation, advanced features, and integration guides, visit:
 
-- **API documentation:** [docs.cloro.dev](https://docs.cloro.dev/)
+- **API documentation:** [cloro.dev/docs](https://cloro.dev/docs/)
 - **Grok scraper page:** [cloro.dev/grok](https://cloro.dev/grok/)
 
 ## Other available scrapers
