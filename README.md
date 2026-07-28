@@ -1,12 +1,28 @@
-# Grok Scraper
+# Grok Scraper API — Real-Time X Citations & News Data
 
 [![Grok scraper by cloro](https://github.com/cloro-dev/grok-scraper/blob/main/grok-scraper-hero-image.png)](https://cloro.dev/grok/?utm_source=github)
 
 [![cloro](https://img.shields.io/badge/Powered%20by-cloro-blue?style=for-the-badge)](https://cloro.dev/)
 
-The [Grok Scraper](https://cloro.dev/grok/) by cloro lets developers programmatically interact with Grok and collect AI search responses with structured metadata. You can retrieve results as parsed JSON, raw HTML, or other formats for integration into your workflows.
+Scrape xAI's Grok responses via API. Returns parsed JSON with the full response text and markdown, **real-time X (Twitter) citations**, source URLs, and freshness metadata. Python, cURL, and Node.js examples below.
 
-You can use cloro's Grok Scraper for current events monitoring, news tracking, research automation, and competitive analysis. It handles dynamic AI-generated content, supports real-time extraction, and removes the need to manage authentication, sessions, or anti-bot systems.
+Built for developers doing AI brand monitoring on Grok, real-time X-driven news tracking, event research where recency matters, and competitive analysis on xAI's answer engine — without managing CAPTCHAs, rotating proxies, session state, or xAI's anti-bot defenses.
+
+## Quick start
+
+1. Get an API key at [cloro.dev](https://cloro.dev/?utm_source=github&utm_medium=readme).
+2. Send a request:
+
+   ```bash
+   curl -X POST https://api.cloro.dev/v1/monitor/grok \
+     -H "Authorization: Bearer YOUR_API_KEY" \
+     -H "Content-Type: application/json" \
+     -d '{"prompt": "What is the market reacting to today?"}'
+   ```
+
+3. Parse the returned JSON — `result.text`, `result.markdown`, `result.citationPills[]`.
+
+Full examples in Python, cURL, and Node.js below.
 
 ## How it works
 
@@ -229,7 +245,7 @@ For detailed documentation, advanced features, and integration guides, visit:
 
 ## Contact us
 
-If you have questions or need support, reach out to us at [support@cloro.dev](mailto:support@cloro.dev).
+If you have questions or need support, join our community at [r/cloroapi](https://www.reddit.com/r/cloroapi/).
 
 ---
 
