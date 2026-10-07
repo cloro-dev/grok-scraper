@@ -6,6 +6,8 @@
 
 The [Grok scraper](https://cloro.dev/grok/?utm_source=github) by cloro returns Grok answers as structured JSON, with richer source metadata than the other AI surfaces: preview text, site name, author, favicon and image alongside the URL.
 
+> **Grok is temporarily unavailable.** Grok has blocked anonymous access for the time being, so requests to this endpoint fail until access is restored. The [providers page](https://cloro.dev/docs/guides/providers) shows the current status.
+
 ## How do you scrape Grok?
 
 1. Get an API key at [cloro.dev](https://cloro.dev/?utm_source=github&utm_medium=readme).
@@ -50,7 +52,7 @@ Node.js and async/webhook examples are in the [endpoint documentation](https://c
 | Parameter | Description | Default |
 | --- | --- | --- |
 | `prompt`\* | The query or question (1-10,000 characters) | – |
-| `country` | Country code for localized results (`US`, `GB`, `DE`) | `US` |
+| `country`\* | Country code for localized results (`US`, `GB`, `DE`) | – |
 | `state` | US state code for finer localization | – |
 | `include.markdown` | Return the answer as Markdown | `false` |
 | `include.html` | Return a URL to the full HTML (expires after 24h) | `false` |
@@ -86,7 +88,7 @@ Node.js and async/webhook examples are in the [endpoint documentation](https://c
 Alongside `text` and `markdown`:
 
 1. **`sources`** — with more metadata per entry than any other cloro surface: `preview`, `searchEngineText`, `siteName`, `metadataTitle`, `creator`, `image` and `favicon` on top of the usual position, URL, label and description.
-2. **`citationPills`** — inline citation chips where present.
+2. **`searchQueries`** — the searches Grok ran to gather its sources.
 3. **`rawResponse`** — the unparsed upstream payload.
 
 The `creator` field is why this surface is worth tracking separately: it names the account behind a cited post, which no other engine exposes.
@@ -116,7 +118,7 @@ cloro reads publicly visible responses. Check your own jurisdiction and terms.
 
 ### What is the recommended timeout?
 
-60 seconds.
+At least 5 minutes (300 seconds), as for every sync endpoint ([retries and cancellation](https://cloro.dev/docs/guides/error-handling#retries-and-cancellation)).
 
 ## Learn more
 
@@ -129,4 +131,4 @@ cloro reads publicly visible responses. Check your own jurisdiction and terms.
 
 ## Contact us
 
-Questions or support: [r/cloroapi](https://www.reddit.com/r/cloroapi/).
+Questions or support: [ask the docs AI assistant](https://cloro.dev/docs/?assistant).
