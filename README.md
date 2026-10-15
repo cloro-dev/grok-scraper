@@ -6,7 +6,7 @@
 
 The [Grok scraper](https://cloro.dev/grok/?utm_source=github) by cloro returns Grok answers as structured JSON, with richer source metadata than the other AI surfaces: preview text, site name, author, favicon and image alongside the URL.
 
-> **Grok scraper is discontinued.** grok.com now shows a sign-up wall to every logged-out visitor before the first answer. cloro gets answers through logged-out sessions, so it cannot get Grok answers. Requests to `/v1/monitor/grok` and async tasks with `taskType` `GROK` fail with a `400` (`MODEL_UNAVAILABLE`) and cost no credits. The [changelog](https://cloro.dev/docs/changelog) has the details.
+> **Grok scraper is discontinued.** grok.com now shows a sign-up wall to every logged-out visitor before the first answer. cloro gets answers through logged-out sessions, so it cannot get Grok answers. Requests to `/v1/monitor/grok` and async tasks with `taskType` `GROK` fail with a `400` (`MODEL_UNAVAILABLE`) and cost no credits. The [providers guide](https://cloro.dev/docs/guides/providers#unsupported-providers) has the details.
 
 ## How do you scrape Grok?
 
